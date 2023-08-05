@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+      <h2 onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+        <span class="menu-text">Inventory</span>
+      </h2>
+      <ul>
+          <li onclick="showDashboard()"><a href="#">Dashboard</a></li>
+          <li onclick="showProducts() "><a href="index.html">Products</a></li>
+          <li onclick="LogoutFunction() "><a href="loginindex.html">Logout</a></li>
+      </ul>
+    </select>
+    </div>
+    <div class="content" id="content">
+      <nav id="menu">
+      </nav>
+      <hr />
+      <main>
+        <h2  id="updateForm">
+          <!-- Dynamically update the selected category title -->
+        </h2>
+  
+        <table>
+          <thead>
+            <!-- Statically create the headings for your table here -->
+            <tr>
+              <td>Id</td>
+              <td>Name</td>
+              <td>Description</td>
+              <td>Price</td>
+              <td>status</td>
+              <td>count</td>
+              <td>Updatecount</td>
+            </tr>
+          </thead>
+          <tbody id="category-products">
+            <!-- Dynamically create your product rows here -->
+          </tbody>
+        </table>
+      </main>
+
+      </table>
+      <div class="product-actions">
+        <input type="text" id="product-id-input" placeholder="Enter Product ID">
+        <button id="remove-product">Remove Product</button><br>
+        <button id="add-product">Add Manual Product</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="categories.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
